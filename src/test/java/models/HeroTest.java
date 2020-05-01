@@ -11,4 +11,11 @@ public class HeroTest {
         assertEquals(true, myHeroes instanceof Hero);
     }
 
+
+    @Test
+    public void testForAge() throws Exception {
+        Hero myHeroes = new Hero("Hulk",47, "Acuracy", "Love");
+        assertEquals(22, myHeroes.getAge());
+    }
+
 }
