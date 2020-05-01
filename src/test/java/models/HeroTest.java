@@ -30,4 +30,10 @@ public class HeroTest {
         assertEquals("Stress", myHeroes.getWeakness());
     }
 
+    @Test
+    public void testForId() {
+        Hero myHeroes = new Hero("Hulk",47, "Acuracy", "Love");
+        assertEquals(0, myHeroes.getId());
+    }
+
 }
