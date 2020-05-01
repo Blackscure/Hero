@@ -15,19 +15,19 @@ public class HeroTest {
     @Test
     public void testForAge() throws Exception {
         Hero myHeroes = new Hero("Hulk",47, "Acuracy", "Love");
-        assertEquals(22, myHeroes.getAge());
+        assertEquals(47, myHeroes.getAge());
     }
 
     @Test
     public void testForSpecialPowers() throws Exception{
         Hero myHeroes = new Hero("Hulk",47, "Acuracy", "Love");
-        assertEquals("Speed",myHeroes.getPower());
+        assertEquals("Acuracy",myHeroes.getPower());
     }
 
     @Test
     public void testForWeakness() throws Exception{
         Hero myHeroes = new Hero("Hulk",47, "Acuracy", "Love");
-        assertEquals("Stress", myHeroes.getWeakness());
+        assertEquals("Love", myHeroes.getWeakness());
     }
 
     @Test

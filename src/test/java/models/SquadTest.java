@@ -15,7 +15,7 @@ public class SquadTest {
     @Test
     public void testForSquadNumber() throws Exception{
         Squad mySquad = new Squad("Avengers",3,"protect Earth");
-        assertEquals(5,mySquad.getMaxNum());
+        assertEquals(3,mySquad.getMaxNum());
     }
 
     @Test
