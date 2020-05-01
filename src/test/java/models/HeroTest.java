@@ -18,4 +18,10 @@ public class HeroTest {
         assertEquals(22, myHeroes.getAge());
     }
 
+    @Test
+    public void testForSpecialPowers() throws Exception{
+        Hero myHeroes = new Hero("Hulk",47, "Acuracy", "Love");
+        assertEquals("Speed",myHeroes.getPower());
+    }
+
 }
