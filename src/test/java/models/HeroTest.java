@@ -1,5 +1,9 @@
 package models;
 
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
 public class HeroTest {
     @Test
     public void newHeroInstantiatesCorrectly_true(){
