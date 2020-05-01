@@ -11,4 +11,16 @@ public class SquadTest {
         Squad mySquad = new Squad("Avengers",5,"protect Earth");
         assertEquals("Avengers",mySquad.getName());
     }
+
+    @Test
+    public void testForSquadNumber() throws Exception{
+        Squad mySquad = new Squad("Avengers",3,"protect Earth");
+        assertEquals(5,mySquad.getMaxNum());
+    }
+
+    @Test
+    public void testForSquadCause() throws Exception{
+        Squad mySquad = new Squad("Avengers",3,"protect Earth");
+        assertEquals("protect Earth", mySquad.getCause());
+    }
 }
