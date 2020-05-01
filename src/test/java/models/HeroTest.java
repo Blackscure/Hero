@@ -12,4 +12,10 @@ public class HeroTest {
         Hero hero =setUpNewHero();
         assertEquals("hulk",hero.getName());
     }
+
+    @Test
+    public void  getPowerChecksTheHerosPower(){
+        Hero hero = setUpNewHero();
+        assertEquals("height",hero.getPower());
+    }
 }
