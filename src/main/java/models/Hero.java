@@ -60,4 +60,15 @@ public class Hero {
         this.power= power;
         this.weakness=weakness;
     }
+
+    public String getPower(){
+        return power;
+    };
+    public String getWeakness(){
+        return weakness;
+    }
+
+    public int getId(){
+        return id;
+    }
 }
