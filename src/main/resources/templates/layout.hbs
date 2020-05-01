@@ -1,45 +1,20 @@
-{{#partial "styles"}}
-    <link rel="stylesheet" href="../css/styles.css">
-{{/partial}}
-
 {{#partial "content"}}
-    <div class="jumbotron" style="text-align:center;)">
-        <img src="/images/justice-league.jpg" width="550px" height="450px">
-        <p>The world has grown dark, and while we have reasons to fear we have the strength not to.
-            There are heroes among us, to remind us that only from fear, comes courage.
-            That only from the darkness, can we truly feel the light.</p>
-        <br><br>
-        {{#if heros}}
-            {{#each heros}}
+    <h1>Your Squad</h1>
+    <p>Add a new Squad</p>
+    <form action="/squads/list" method="POST" class="form-group">
 
-                <div class="container" style="width: 25rem; text-align:center;">
-                    <h3 >Hero {{name}}</h3>
-                    <p>Age: {{age}}</p>
-                    <p>Powers: {{power}}</p>
-                    <p>Weaknesses: {{weakness}}</p>
-                </div>
-            {{/each}}
-        {{else}}
-            <h4>Add a hero to save your town</h4>
-        {{/if}}
-        <h1>Squads</h1>
+        <label for="squadName">Squad Name</label>
+        <input id="squadName" type="text" name ="squadName" class="form-control">
 
-        {{#if squads}}
-            {{#each squads}}
-                <div class="list">
-                    <ul>
-                        <li>
-                            <p>Squad Name: <span>{{name}}</span></p>
-                            <p>Squad Size :{{maxNum}}</p>
-                            <p>Cause:{{cause}}</p>
-                        </li>
-                    </ul>
-                </div>
-            {{/each}}
-        {{else}}
-            <p>No Squads added Yet.</p>
-        {{/if}}
-    </div>
+        <label for="squadNumber">Maximum Squad Size</label>
+        <input id="squadNumber" type="text" name="squadNumber" class="form-control">
+
+        <label for="cause">Cause of Squad</label>
+        <input id="squadCause" type="text" name="squadCause" class="form-control">
+        <br>
+
+        <button type="submit" class="btn btn-danger">Add Squad</button>
+    </form>
+
 {{/partial}}
-
 {{>layout.hbs}}
