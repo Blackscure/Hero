@@ -24,4 +24,10 @@ public class HeroTest {
         assertEquals("Speed",myHeroes.getPower());
     }
 
+    @Test
+    public void testForWeakness() throws Exception{
+        Hero myHeroes = new Hero("Hulk",47, "Acuracy", "Love");
+        assertEquals("Stress", myHeroes.getWeakness());
+    }
+
 }
