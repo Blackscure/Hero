@@ -1,13 +1,10 @@
 {{#partial "styles"}}
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 {{/partial}}
 
 {{#partial "content"}}
-    <div class="jumbotron" style="text-align:center;)">
-        <img src="/images/justice-league.jpg" width="550px" height="450px">
-        <p>The world has grown dark, and while we have reasons to fear we have the strength not to.
-            There are heroes among us, to remind us that only from fear, comes courage.
-            That only from the darkness, can we truly feel the light.</p>
+    <div class="landpage" style="text-align:center;)">
+
         <br><br>
         {{#if heros}}
             {{#each heros}}
@@ -20,7 +17,7 @@
                 </div>
             {{/each}}
         {{else}}
-            <h4>Add a hero to save your town</h4>
+            <h4>Add Your Hero</h4>
         {{/if}}
         <h1>Squads</h1>
 
