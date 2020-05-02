@@ -44,13 +44,10 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         //get to show all heros
-        get("/",(request, response) -> {
-            Map<String,Object> model = new HashMap<>();
-            ArrayList<Hero> heros = Hero.getAll();
-            ArrayList<Squad> squads =Squad.getAll();
-            model.put("heros",heros);
-            model.put("squads",squads);
-            return new ModelAndView(model,"index.hbs");
+        get("/",(request, response) -> { Map<String,Object> model = new HashMap<>();
+        ArrayList<Hero> heros = Hero.getAll();ArrayList<Squad> squads =Squad.getAll();
+         model.put("heros",heros);model.put("squads",squads);
+         return new ModelAndView(model,"index.hbs");
 
         }, new HandlebarsTemplateEngine());
 
