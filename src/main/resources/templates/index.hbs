@@ -1,0 +1,42 @@
+{{#partial "styles"}}
+    <link rel="stylesheet" href="./css/styles.css">
+{{/partial}}
+
+{{#partial "content"}}
+    <div class="landpage" style="text-align:center;)">
+
+        <br><br>
+        {{#if heros}}
+            {{#each heros}}
+
+                <div class="container" style="width: 25rem; text-align:center;">
+                    <h3 >Hero {{name}}</h3>
+                    <p>Age: {{age}}</p>
+                    <p>Powers: {{power}}</p>
+                    <p>Weaknesses: {{weakness}}</p>
+                </div>
+            {{/each}}
+        {{else}}
+            <h4>Add Your Hero</h4>
+        {{/if}}
+        <h1>Squads</h1>
+
+        {{#if squads}}
+            {{#each squads}}
+                <div class="list">
+                    <ul>
+                        <li>
+                            <p>Squad Name: <span>{{name}}</span></p>
+                            <p>Squad Size :{{maxNum}}</p>
+                            <p>Cause:{{cause}}</p>
+                        </li>
+                    </ul>
+                </div>
+            {{/each}}
+        {{else}}
+            <p>No Squads added Yet.</p>
+        {{/if}}
+    </div>
+{{/partial}}
+
+{{>layout.hbs}}
