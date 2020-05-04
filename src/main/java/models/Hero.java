@@ -35,6 +35,7 @@ public class Hero {
         this.power=power;
         this.weakness=weakness;
         instances.add(this);
+        this.id = instances.size();
     }
 
     public String getName(){
@@ -59,6 +60,7 @@ public class Hero {
         this.age=age;
         this.power= power;
         this.weakness=weakness;
+        this.id = instances.size();
     }
 
     public String getPower(){
@@ -70,5 +72,9 @@ public class Hero {
 
     public int getId(){
         return id;
+    }
+
+    public static void clearAllHero() {
+        instances.clear();// clear as a method is part of the ArrayList class.
     }
 }

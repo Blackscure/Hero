@@ -61,6 +61,13 @@ public class App {
 
         },new HandlebarsTemplateEngine());
 
+        //get: delete all posts
+        get("/posts/delete", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            Hero.clearAllHero();
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+
         //squad
 
         //get to show new squad form

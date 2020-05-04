@@ -43,4 +43,11 @@ public class HeroTest {
         assertEquals("Hulk", myHeroes.getName());
     }
 
+    @Test
+    public void deleteAllHeroesDeletesAllHeroes() throws Exception {
+        Hero myHeroes = new Hero("Hulk",47, "Acuracy", "Love");
+        Hero.clearAllHero();
+        assertEquals(0, Hero.getAll().size());
+    }
+
 }
